@@ -66,7 +66,7 @@ export default class App extends Component {
         <SearchBar onSubmit={this.onChangeSerchQuery} />
         <ImageGallery images={images} onClick={this.toggleModal} />
         {images.length % 12 < 1 && images.length > 0 && (
-          <ButtonLoadMore onClick={this.fetchImages} btnRef={this.btnRef} />
+          <ButtonLoadMore onClick={this.fetchImages} />
         )}
         <Loader loading={isLoading} />
         {showModal && <Modal url={modalUrl} toggleModal={this.toggleModal} />}
